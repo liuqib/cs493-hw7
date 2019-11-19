@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding:0;
+  /* text-align: center; */
+}
+.header{
+  margin-top: 10vh;
+  text-align: center;
+}
+.container{
+  text-align: center;
+  font-size: 2vh;
+}
+table.center {
+   margin-left:auto;
+   margin-right:auto;
+   margin-top: 5vh;
+   font-size: 2vh;
+ }
