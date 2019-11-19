@@ -99,10 +99,17 @@ function delete_boat(id){                                                       
 
 /* ------------- Begin Controller Functions ------------- */
 
-router.get('/', checkJwt, function(req, res){
-    const lodgings = get_lodgings(req.user.name)
-	.then( (lodgings) => {
-        res.status(200).json(lodgings);
+// router.get('/', checkJwt, function(req, res){
+//     const lodgings = get_lodgings(req.user.name)
+// 	.then( (lodgings) => {
+//         res.status(200).json(lodgings);
+//     });
+// });
+
+router.get('/', function(req, res){
+    const boats = get_boats(req)
+	.then( (boats) => {
+        res.status(200).json(boats);
     });
 });
 
@@ -165,7 +172,7 @@ login.post('/', function(req, res){
 
 /* ------------- End Controller Functions ------------- */
 
-app.use('/lodgings', router);
+// app.use('/lodgings', router);
 app.use('/boats', router);
 app.use('/login', login);
 
